@@ -26,7 +26,7 @@ export default function Homepage() {
     <div >
       {user ? (
         <div >
-          <button style={{margin:"10px 10px",backgroundColor:"green",fontWeight:"bold"}} onClick={handleLogout}> Logout </button>
+          <button style={{margin:"10px 10px",backgroundColor:"green",fontWeight:"bold",color:"white"}} onClick={handleLogout}> Logout </button>
           <button style={{margin:"10px 10px",backgroundColor:"green",fontWeight:"bold"}}>
             <Link style ={{color:"white",padding : "10px 10px"}} to="/cart">Cart </Link>
           </button>
