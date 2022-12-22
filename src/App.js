@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from "./pages/login/login.js";
+import Register from "./pages/Register/register.js";
+import Homepage from "./pages/Homepage/homepage.js";
+import Cart from "./pages/Cart/cart.js";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 function App() {
+  const { user } = useContext(Context);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Homepage />} />
+        <Route path="/login" element={user ? <Homepage /> : <Login />} />
+        <Route path="/register" element={user ? <Homepage /> : <Register />} />
+        <Route path="/cart" element={user ? <Cart /> : <Login />} />
+      </Routes>
+    </Router>
   );
 }
 
