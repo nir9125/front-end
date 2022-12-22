@@ -6,17 +6,17 @@ import { Link } from "react-router-dom";
 export default function Homepage() {
   const { user, dispatch } = useContext(Context);
   const products = [
-    { id: "1", name: "product 1",img:require("../img/1.jpg"), desc: "A very nice product", price: 100 },
+    { id: "1", name: "product 1",img:"https://drive.google.com/uc?export=view&id=1LH2ThIDn7pvVPAJaASzYlYchHEwzj9tq", desc: "A very nice product", price: 100 },
     {
       id: "2",
       name: "product 2",
-      img:require("../img/2.jpg"),
+      img:"https://drive.google.com/uc?export=view&id=1WRZDFaAwFdxOzXH3BidwMLO2oveHP3DY",
       desc: "also a very nice product",
       price: 200,
     },
-    { id: "3", name: "product 3",img:require("../img/3.jpg"), desc: "somewhat good product", price: 300 },
-    { id: "4", name: "product 4",img:require("../img/4.jpg"), desc: "good product", price: 500 },
-    { id: "5", name: "product 5",img:require("../img/5.jpg"), desc: "not a good product", price: 400 },
+    { id: "3", name: "product 3",img:"https://drive.google.com/uc?export=view&id=18gudlqYCJTcyo5lHZGzAVo063Q8dsLXX", desc: "somewhat good product", price: 300 },
+    { id: "4", name: "product 4",img:"https://drive.google.com/uc?export=view&id=1O4331EuRzcOLET4wSLo5CQzjO3A0Y9Gi", desc: "good product", price: 500 },
+    { id: "5", name: "product 5",img:"https://drive.google.com/uc?export=view&id=1jfsIsPIf5x4l4d6DQ6FiRceuB0dcIiHZ", desc: "not a good product", price: 400 },
   ];
 
   const handleLogout = () => {

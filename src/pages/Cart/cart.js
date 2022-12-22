@@ -21,8 +21,8 @@ export default function Cart() {
 
   return (
     <div>
-      <button>
-        <Link to="/">Home</Link>
+      <button style={{margin:"10px 10px",backgroundColor:"green",fontWeight:"bold"}}>
+        <Link style ={{color:"white",padding : "10px 10px"}} to="/">Home</Link>
       </button>
       <Products products={products} />
     </div>
