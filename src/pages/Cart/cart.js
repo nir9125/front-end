@@ -8,7 +8,7 @@ export default function Cart() {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const res = await axios.get("http://localhost:5000/api/v1/products", {
+      const res = await axios.get("https://ecommerce2-ugb8.onrender.com/api/v1/products", {
         headers: {
           Authorization: `Bearer ${JSON.parse(localStorage.user).token}`,
         },

@@ -13,7 +13,7 @@ export default function Login() {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("http://localhost:5000/api/v1/login", {
+      const res = await axios.post("https://ecommerce2-ugb8.onrender.com/api/v1/login", {
         email: userRef.current.value,
         password: passwordRef.current.value,
       });

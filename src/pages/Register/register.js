@@ -16,7 +16,7 @@ export default function Register() {
     console.log(email, password);
     setError(false);
     try {
-      const res = await axios.post("http://localhost:5000/api/v1/signup", {
+      const res = await axios.post("https://ecommerce2-ugb8.onrender.com/api/v1/signup", {
         username,
         email,
         password,

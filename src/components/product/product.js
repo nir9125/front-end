@@ -6,7 +6,7 @@ export default function Product({ product }) {
   const handleClick = async (e) => {
     e.preventDefault();
     const res = await axios.post(
-      "http://localhost:5000/api/v1/product",
+      "https://ecommerce2-ugb8.onrender.com/api/v1/product",
       {
         id: product.id,
         name: product.name,
