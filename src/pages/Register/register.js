@@ -10,6 +10,8 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
+  const [status,setStatus] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -21,7 +23,11 @@ export default function Register() {
         email,
         password,
       });
-      res.data && window.location.replace("/login");
+      //console.log(res)
+      if(res.data.success)
+        setStatus("You have Sucessfully Registered!");
+       
+      // res.data && window.location.replace("/login");
       console.log(res.data);
     } catch (err) {
       setError(true);
@@ -54,7 +60,7 @@ export default function Register() {
         />
         <button className="registerButton">Register</button>
       </form>
-
+        <div style={{color:"green",marginTop:"20px"}}>{status!=""?status:""}</div>
       <button type="submit" className="registerLoginButton">
         <Link className="link" to="/login">
           login
